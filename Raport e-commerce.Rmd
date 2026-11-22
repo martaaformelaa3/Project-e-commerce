@@ -1,0 +1,50 @@
+---
+title: "Raport z analizy danych"
+authors: "Marta Formela, Julia Górecka, Wiktoria Kiersz"
+output: html_document
+date: "2026-11-22"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#wczytanie danych
+setwd("C:/Users/localadmin/Desktop/PROJEKT/Projekt Analiza R/Project-e-commerce/Dane")
+Dane <- read.csv("eCommerce-dataset.csv")
+```
+
+#1.Wprowadzenie
+
+#2.Porządkowanie i czyszczenie danych
+
+##2.1 Braki danych
+
+liczba braków danych to 'r n_miss(dane)',
+co stanowi 'r pct_miss(dane)' %wszystkich danych.
+
+```{r}
+view_miss(Dane, warn_large_data = FALSE)
+```
+
+```{r}
+gg_miss_var(Dane)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
