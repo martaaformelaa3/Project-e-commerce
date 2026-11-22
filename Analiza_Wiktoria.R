@@ -7,3 +7,5 @@ Liczba braków w danych to `r n_miss(dane)`,
 co stanowi `r pct_miss(dane)` % wszystkich danych.
 
 vis_miss(dane, warn_large_date = FALSE)
+
+gg_miss_fct(dane,fct=Pojazd.uszkodzony)
