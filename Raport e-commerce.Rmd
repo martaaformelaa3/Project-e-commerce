@@ -10,6 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 #wczytanie danych
 setwd("C:/Users/localadmin/Desktop/PROJEKT/Projekt Analiza R/Project-e-commerce/Dane")
 Dane <- read.csv("eCommerce-dataset.csv")
+library(naniar)
 ```
 
 #1.Wprowadzenie
@@ -22,13 +23,16 @@ liczba braków danych to 'r n_miss(dane)',
 co stanowi 'r pct_miss(dane)' %wszystkich danych.
 
 ```{r}
-view_miss(Dane, warn_large_data = FALSE)
+vis_miss(Dane, warn_large_data = FALSE)
 ```
 
 ```{r}
 gg_miss_var(Dane)
 ```
 
+```{r}
+gg_miss_fct(Dane,fct=Age )
+```
 ## R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
